@@ -135,32 +135,49 @@ class ParangSynth {
     osc.stop(now + 0.1);
   }
 
-  // Box Bass (Marímbula / Tambora): Deep acoustic wooden box thump
+  // Box Bass (Marímbula / Tambora): Acoustic wooden box thump audible on laptops and phones
   playBoxBass(note = 'low') {
     this.init();
     const now = this.ctx.currentTime;
-    const osc = this.ctx.createOscillator();
-    const gain = this.ctx.createGain();
-    const filter = this.ctx.createBiquadFilter();
 
-    const freq = note === 'low' ? 55 : 73.42; // A1 or D2
-    osc.type = 'triangle';
-    osc.frequency.setValueAtTime(freq, now);
-    osc.frequency.exponentialRampToValueAtTime(freq * 0.95, now + 0.3);
+    // 1. Wood box strike transient (the acoustic slap on the wood)
+    const slapOsc = this.ctx.createOscillator();
+    const slapGain = this.ctx.createGain();
+    slapOsc.type = 'sine';
+    slapOsc.frequency.setValueAtTime(340, now);
+    slapOsc.frequency.exponentialRampToValueAtTime(140, now + 0.08);
 
-    filter.type = 'lowpass';
-    filter.frequency.setValueAtTime(180, now);
+    slapGain.gain.setValueAtTime(0.85, now);
+    slapGain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
 
-    gain.gain.setValueAtTime(0.0001, now);
-    gain.gain.linearRampToValueAtTime(0.65, now + 0.012);
-    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.35);
+    slapOsc.connect(slapGain);
+    slapGain.connect(this.masterGain);
+    slapOsc.start(now);
+    slapOsc.stop(now + 0.12);
 
-    osc.connect(filter);
-    filter.connect(gain);
-    gain.connect(this.masterGain);
+    // 2. Resonant body bass tone (130Hz - 165Hz with rich harmonics so phone/laptop speakers reproduce it)
+    const bodyOsc = this.ctx.createOscillator();
+    const bodyGain = this.ctx.createGain();
+    const bodyFilter = this.ctx.createBiquadFilter();
 
-    osc.start(now);
-    osc.stop(now + 0.38);
+    bodyOsc.type = 'triangle';
+    const pitch = note === 'low' ? 130.81 : 164.81; // C3 or E3
+    bodyOsc.frequency.setValueAtTime(pitch, now);
+    bodyOsc.frequency.exponentialRampToValueAtTime(pitch * 0.85, now + 0.3);
+
+    bodyFilter.type = 'lowpass';
+    bodyFilter.frequency.setValueAtTime(550, now);
+
+    bodyGain.gain.setValueAtTime(0.001, now);
+    bodyGain.gain.linearRampToValueAtTime(0.9, now + 0.015);
+    bodyGain.gain.exponentialRampToValueAtTime(0.001, now + 0.38);
+
+    bodyOsc.connect(bodyFilter);
+    bodyFilter.connect(bodyGain);
+    bodyGain.connect(this.masterGain);
+
+    bodyOsc.start(now);
+    bodyOsc.stop(now + 0.4);
   }
 
   // Celebratory Chime / Ding for Quiz & Games

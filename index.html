@@ -35,7 +35,7 @@
       </a>
 
       <ul class="nav-links" id="nav-links">
-        <li><a href="#reader-section">📖 Reader</a></li>
+        <li><a href="#reader-section">📖 Story Preview</a></li>
         <li><a href="#music-section">🎶 Music & Rhythm</a></li>
         <li><a href="#activities-section">🎨 Kids' Corner</a></li>
         <li><a href="#cultural-hub-section">🌴 Cultural Hub</a></li>
@@ -66,7 +66,7 @@
           Join young Azariah as she follows the strum of the four-string cuatro and the rattle of chac-chacs through the moonlit streets of Princes Town, discovering the joyful music, delicious pastelles, and rich legacy of Queen Daisy Voisin.
         </p>
         <div class="hero-ctas">
-          <a href="#reader-section" class="btn-hero-primary">📖 Open Interactive Reader</a>
+          <a href="#reader-section" class="btn-hero-primary">📖 Story Sneak Peek</a>
           <a href="#music-section" class="btn-hero-secondary">🎶 Play Virtual Parang Band</a>
           <a href="#activities-section" class="btn-hero-secondary">🎨 Kids' Activity Corner</a>
         </div>
@@ -82,8 +82,8 @@
         <div class="hero-cover-wrap">
           <img src="images/cover.jpg" alt="Azariah's Parang Adventure Book Cover" id="hero-cover-img">
           <div class="cover-badge">
-            <span>📖 Final Draft • 23 Illustrated Spreads</span>
-            <a href="#reader-section">Read Now ➡️</a>
+            <span>📖 Story Sneak Peek • Look Inside!</span>
+            <a href="#reader-section">Preview Now ➡️</a>
           </div>
         </div>
       </div>
@@ -93,9 +93,9 @@
   <!-- Section 1: Interactive Digital Reader & Flipbook -->
   <section id="reader-section">
     <div class="section-header">
-      <span class="section-eyebrow">Interactive Digital Reader</span>
-      <h3 class="section-title">Turn the Pages with Azariah</h3>
-      <p class="section-desc">Experience every vibrant spread in full high-resolution widescreen or single-page view. Click any page to zoom in!</p>
+      <span class="section-eyebrow">Story Sneak Peek</span>
+      <h3 class="section-title">A Look Inside the Adventure</h3>
+      <p class="section-desc">Enjoy a sneak peek of Azariah's Christmas Eve walk through Princes Town! To experience the complete 23-page illustrated adventure, order your copy below.</p>
     </div>
 
     <div class="reader-section">
@@ -106,7 +106,7 @@
           <span class="reader-page-title" id="reader-page-title">Cover — Azariah's Parang Adventure</span>
         </div>
         <div class="reader-actions">
-          <button class="reader-ctrl-btn" id="reader-mode-toggle" title="Switch between Spreads and Single Page view">🌟 Double Spread Mode</button>
+          
           <button class="reader-ctrl-btn" id="reader-zoom" title="Zoom in on current page">🔍 Zoom</button>
           <button class="reader-ctrl-btn" id="reader-fullscreen" title="Read in Fullscreen">⛶ Fullscreen</button>
         </div>
@@ -127,6 +127,17 @@
       <!-- Filmstrip Thumbnails -->
       <div class="reader-thumbnails-wrap">
         <div class="reader-thumb-bar" id="reader-thumb-bar"></div>
+      </div>
+
+      <!-- Sneak Peek Book CTA -->
+      <div class="sneak-peek-cta-box">
+        <div class="cta-inner">
+          <div class="cta-text">
+            <h4>📖 Want to read the full 23-page adventure?</h4>
+            <p>Join Azariah through all 23 illustrated pages as she joins the village parang band, tastes warm pastelles, and meets Queen Daisy Voisin!</p>
+          </div>
+          <a href="#order-section" class="btn-hero-primary">🛍️ Get the Book ($15 USD / $100 TTD)</a>
+        </div>
       </div>
     </div>
   </section>
@@ -205,7 +216,7 @@
         <div class="instrument-card" id="card-cuatro">
           <div class="instrument-icon">&#129685;</div>
           <h5>Trinidad Cuatro</h5>
-          <span class="instrument-shortcut">Keyboard: [C]</span>
+          <span class="instrument-shortcut">Key: [A]</span>
           <div class="cuatro-chords-row">
             <button class="cuatro-chord-btn active" data-chord="G">G</button>
             <button class="cuatro-chord-btn" data-chord="C">C</button>
@@ -217,19 +228,19 @@
         <div class="instrument-card" id="card-chacchac">
           <div class="instrument-icon">&#129381;</div>
           <h5>Chac-Chacs</h5>
-          <span class="instrument-shortcut">Keyboard: [M]</span>
+          <span class="instrument-shortcut">Key: [S]</span>
           <button class="btn-play-instrument" id="play-chacchac-btn">Shake! &#127926;</button>
         </div>
         <div class="instrument-card" id="card-toctoc">
           <div class="instrument-icon">&#129717;</div>
           <h5>Toc-Toc</h5>
-          <span class="instrument-shortcut">Keyboard: [T]</span>
+          <span class="instrument-shortcut">Key: [K]</span>
           <button class="btn-play-instrument" id="play-toctoc-btn">Clack! &#127926;</button>
         </div>
         <div class="instrument-card" id="card-boxbass">
           <div class="instrument-icon">&#128230;</div>
           <h5>Box Bass</h5>
-          <span class="instrument-shortcut">Keyboard: [B]</span>
+          <span class="instrument-shortcut">Key: [L]</span>
           <button class="btn-play-instrument" id="play-boxbass-btn">Thump! &#127926;</button>
         </div>
       </div>
@@ -416,34 +427,7 @@
       </div>
     </div>
 
-    <!-- Trinidad Christmas Food Spotlight -->
-    <h3 class="food-spotlight-title">🍴 Parang Makes You Hungry! (Traditional Christmas Food)</h3>
-    <div class="food-grid">
-      <div class="food-card">
-        <span class="food-emoji">🫔</span>
-        <h4>Steamed Pastelles</h4>
-        <p>Cornmeal dough filled with seasoned beef, chicken, or lentils, flavored with raisins, olives, and capers, wrapped in banana leaves and steamed to fragrant perfection.</p>
-      </div>
-
-      <div class="food-card">
-        <span class="food-emoji">🍷</span>
-        <h4>Ruby-Red Sorrel</h4>
-        <p>A festive, deep crimson beverage brewed from steeped sepals of the sorrel plant, spiced with cinnamon sticks, whole cloves, and dried orange peel.</p>
-      </div>
-
-      <div class="food-card">
-        <span class="food-emoji">🥮</span>
-        <h4>Traditional Black Cake</h4>
-        <p>The crown jewel of Caribbean Christmas: rich fruit cake made with dried fruits macerated for months in dark rum and cherry brandy, with aromatic warm spices.</p>
-      </div>
-
-      <div class="food-card">
-        <span class="food-emoji">🥛</span>
-        <h4>Ponche de Crème</h4>
-        <p>Trinidad's creamy, velvety homemade eggnog, infused with sweetened condensed milk, fresh lime zest, aromatic Angostura bitters, and grated nutmeg.</p>
-      </div>
-    </div>
-  </section>
+</section>
 
   <!-- Section 5: Meet the Author & Portfolio Hub -->
   <section id="author-section">
@@ -503,60 +487,76 @@
     </div>
   </section>
 
-  <!-- Section 6: Printables & Screen-Free Activity Corner -->
+  <!-- Section 6: Screen-Free Printable Activities -->
   <section id="downloads-section">
     <div class="section-header">
-      <span class="section-eyebrow">Screen-Free Family & Classroom Corner</span>
-      <h3 class="section-title">Printables & Official PDFs</h3>
-      <p class="section-desc">Download complete high-resolution editions for offline reading, tablet viewing, or classroom printing.</p>
+      <span class="section-eyebrow">Screen-Free Activities</span>
+      <h3 class="section-title">Printable Activity Sheets</h3>
+      <p class="section-desc">Need a screen-free break? Print these fun, ink-friendly coloring pages, word search puzzles, and worksheets for home or the classroom!</p>
     </div>
 
     <div class="downloads-grid">
-      <!-- Download 1: Spreads PDF -->
+      <!-- Sheet 1: Cuatro Coloring -->
       <div class="download-card">
         <div>
-          <div class="download-icon">📖</div>
-          <h4>Final Draft Spreads PDF</h4>
-          <p>Full 23-spread cinematic edition matching the book's dual-page print layout. Perfect for widescreen monitors, projectors, and interactive smartboards.</p>
+          <div class="download-icon">🎨</div>
+          <h4>Cuatro Coloring Sheet</h4>
+          <p>Black-and-white outline of a Trinidadian cuatro with festive Caribbean hibiscus flowers and musical notes ready for crayons or markers.</p>
         </div>
         <div>
           <div class="download-meta">
-            <span>Format: PDF</span>
-            <span>Size: 11.8 MB</span>
+            <span>Type: Coloring Sheet</span>
+            <span>Ink-Friendly B&amp;W</span>
           </div>
-          <a href="Azariah_Parang_Adventure_Final_Draft_Spreads.pdf" download class="btn-download">⬇️ Download Spreads PDF</a>
+          <button class="btn-download" onclick="printSheet('print-cuatro')">🖨️ Print Coloring Sheet</button>
         </div>
       </div>
 
-      <!-- Download 2: Single-Pages PDF -->
+      <!-- Sheet 2: Word Search -->
       <div class="download-card">
         <div>
-          <div class="download-icon">📱</div>
-          <h4>Single-Pages Print & Mobile PDF</h4>
-          <p>Individual 1:1 square single pages formatted for mobile reading, iPad/tablets, and standard single-sheet home printers.</p>
+          <div class="download-icon">🔍</div>
+          <h4>Parang Word Search</h4>
+          <p>Find 10 hidden Caribbean parang words: CUATRO, DAISY, VOISIN, PASTELLE, SORREL, MARACAS, ALEGRIA, SERENO, PRINCES TOWN, PARANG!</p>
         </div>
         <div>
           <div class="download-meta">
-            <span>Format: PDF</span>
-            <span>Size: 14.0 MB</span>
+            <span>Type: Word Puzzle</span>
+            <span>Ages 5+</span>
           </div>
-          <a href="Azariah_Parang_Adventure_Final_Draft_SinglePages.pdf" download class="btn-download">⬇️ Download Single Pages</a>
+          <button class="btn-download" onclick="printSheet('print-wordsearch')">🖨️ Print Word Search</button>
         </div>
       </div>
 
-      <!-- Download 3: Full Project Zip Bundle -->
+      <!-- Sheet 3: Detective Worksheet -->
       <div class="download-card">
         <div>
-          <div class="download-icon">📦</div>
-          <h4>Complete Offline Archive (.zip)</h4>
-          <p>Contains both PDF editions, all 23 high-resolution illustrations, and the standalone offline digital reader.</p>
+          <div class="download-icon">📝</div>
+          <h4>Parang Detective Worksheet</h4>
+          <p>Printable pencil-and-paper worksheet featuring Azariah's 5 musical riddles and the holiday scavenger checklist.</p>
         </div>
         <div>
           <div class="download-meta">
-            <span>Format: ZIP</span>
-            <span>Size: 27.6 MB</span>
+            <span>Type: Activity Worksheet</span>
+            <span>Riddles &amp; Checklist</span>
           </div>
-          <a href="Azariah_Parang_Adventure_Final_Draft.zip" download class="btn-download">⬇️ Download Complete ZIP</a>
+          <button class="btn-download" onclick="printSheet('print-detective')">🖨️ Print Worksheet</button>
+        </div>
+      </div>
+
+      <!-- Sheet 4: Award Certificate -->
+      <div class="download-card">
+        <div>
+          <div class="download-icon">🏅</div>
+          <h4>Master Parandero Certificate</h4>
+          <p>Official printable honor certificate for young readers and music explorers to write their name on and hang on their wall!</p>
+        </div>
+        <div>
+          <div class="download-meta">
+            <span>Type: Award Certificate</span>
+            <span>Print &amp; Frame</span>
+          </div>
+          <button class="btn-download" onclick="printSheet('print-cert')">🖨️ Print Certificate</button>
         </div>
       </div>
     </div>
@@ -638,6 +638,9 @@
       <button class="btn-modal-primary" id="play-again-match-btn">Play Again 🔄</button>
     </div>
   </div>
+
+  <!-- Hidden Print Area for Screen-Free Printable Sheets -->
+  <div id="printable-area" class="printable-area" style="display:none;"></div>
 
   <!-- Scripts -->
   <script src="js/audio-synth.js"></script>

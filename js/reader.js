@@ -4,33 +4,12 @@
 class BookReader {
   constructor() {
     this.spreads = [
-      { file: "images/cover.jpg",   label: "Cover — Azariah's Parang Adventure", audioStop: null },
-      { file: "images/pg01.jpg",    label: "Page 1 — Christmas Eve in Princes Town", audioStop: null },
-      { file: "images/pg02.jpg",    label: "Page 2 — Azariah Hears the Music", audioStop: null },
-      { file: "images/pg03.jpg",    label: "Page 3 — At the Corner / Alegria", audioStop: { title: "Alegria, Alegria", id: "stop-alegria" } },
-      { file: "images/pg04.jpg",    label: "Page 4 — What's That Instrument? / Cuatro", audioStop: null },
-      { file: "images/pg05.jpg",    label: "Page 5 — The Maracas / Sereno", audioStop: { title: "Sereno, Sereno", id: "stop-sereno" } },
-      { file: "images/pg06.jpg",    label: "Page 6 — House to House & Can You Find?", audioStop: null },
-      { file: "images/pg07.jpg",    label: "Page 7 — Parang Makes You Hungry!", audioStop: null },
-      { file: "images/pg08.jpg",    label: "Page 8 — Your Turn! & Flowers for Daisy", audioStop: null },
-      { file: "images/pg09.jpg",    label: "Page 9 — The Night Gets Dark", audioStop: null },
-      { file: "images/pg10.jpg",    label: "Page 10 — Listening Stop: Hurrah Hurrah!", audioStop: { title: "Hurrah, Hurrah", id: "stop-hurrah" } },
-      { file: "images/pg11.jpg",    label: "Page 11 — Parang Detective (Riddle Time!)", activityId: "tab-detective" },
-      { file: "images/pg12.jpg",    label: "Page 12 — The Story of Daisy Voisin", audioStop: null },
-      { file: "images/pg13.jpg",    label: "Page 13 — Now You're the Band!", activityId: "music-section" },
-      { file: "images/pg14.jpg",    label: "Page 14 — The Big Parang Finale", audioStop: null },
-      { file: "images/pg15.jpg",    label: "Page 15 — Daisy Voisin's Christmas Playlist", audioStop: null },
-      { file: "images/pg16.jpg",    label: "Page 16 — What Azariah Learned", audioStop: null },
-      { file: "images/pg17.jpg",    label: "Page 17 — Design Your Own Cuatro!", activityId: "tab-cuatro" },
-      { file: "images/pg18.jpg",    label: "Page 18 — I Am a Parang Explorer!", activityId: "tab-explorer" },
-      { file: "images/pg19.jpg",    label: "Page 19 — Parang Matching Game", activityId: "tab-matching" },
-      { file: "images/pg20.jpg",    label: "Page 20 — Goodnight, Azariah", audioStop: null },
-      { file: "images/pg21.jpg",    label: "Page 21 — Let's Keep Parang Alive!", activityId: "cultural-hub-section" },
-      { file: "images/ending.jpg",  label: "The End — Waving Goodbye from the Porch", audioStop: null }
+      { file: "images/cover.jpg", label: "Cover — Azariah's Parang Adventure" },
+      { file: "images/pg01.jpg",  label: "Sneak Peek: Page 1 — Christmas Eve in Princes Town" },
+      { file: "images/pg02.jpg",  label: "Sneak Peek: Page 2 — Azariah Hears the Music" }
     ];
 
     this.currentIndex = 0;
-    this.viewMode = 'spread'; // 'spread' or 'single'
     this.touchStartX = 0;
     this.touchEndX = 0;
 
@@ -140,6 +119,14 @@ class BookReader {
           <div class="audio-banner-item activity">
             <span>🎨 <strong>Interactive Activity:</strong> This page has an interactive companion activity!</span>
             <a href="#${page.activityId}" class="banner-link-btn">Jump to Activity 🚀</a>
+          </div>
+        `;
+        audioNotice.style.display = 'block';
+      } else if (this.currentIndex === this.spreads.length - 1) {
+        audioNotice.innerHTML = `
+          <div class="audio-banner-item" style="background: linear-gradient(135deg, rgba(225, 29, 72, 0.3) 0%, rgba(251, 191, 36, 0.3) 100%);">
+            <span>✨ <strong>End of Sneak Peek!</strong> Want to read Azariah's full 23-page Christmas adventure?</span>
+            <a href="#order-section" class="banner-link-btn" style="background: #e11d48; color: #fff;">🛍️ Get the Full Book</a>
           </div>
         `;
         audioNotice.style.display = 'block';

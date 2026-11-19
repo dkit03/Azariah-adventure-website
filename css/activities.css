@@ -1230,19 +1230,22 @@
 /* Print Optimization */
 @media print {
   body * {
-    visibility: hidden;
+    visibility: hidden !important;
   }
   .printable-area, .printable-area * {
-    visibility: visible;
+    visibility: visible !important;
   }
   .printable-area {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
+    display: block !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
   }
   .non-printable {
     display: none !important;
