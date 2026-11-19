@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azariah's Parang Adventure — Companion Website | By Kristee Kalisingh</title>
+  <meta name="description" content="Explore Azariah's Parang Adventure by Kristee Kalisingh. Interactive flipbook, Caribbean parang rhythm room, Daisy Voisin audio listening stops, kids' cuatro design studio, matching game, and cultural guide.">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/reader.css">
+  <link rel="stylesheet" href="css/activities.css">
+</head>
+<body>
+
+  <!-- Caribbean Festive Fairy Lights Strip -->
+  <div class="fairy-lights-container" aria-hidden="true">
+    <ul class="fairy-lights festive" id="fairy-lights">
+      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    </ul>
+  </div>
+
+  <!-- Sticky Header Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-wrap">
+        <span class="brand-icon">🌺</span>
+        <div class="brand-text">
+          <h1>Azariah's Parang Adventure</h1>
+          <p>By Kristee Kalisingh • Princes Town, Trinidad</p>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#reader-section">📖 Reader</a></li>
+        <li><a href="#music-section">🎶 Music & Rhythm</a></li>
+        <li><a href="#activities-section">🎨 Kids' Corner</a></li>
+        <li><a href="#cultural-hub-section">🌴 Cultural Hub</a></li>
+        <li><a href="#author-section">✍️ Meet Kristee</a></li>
+        <li><a href="#downloads-section">📥 Printables</a></li>
+        <li><a href="#order-section" class="nav-btn-primary">Get the Book</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button class="light-toggle-btn" id="fairy-lights-toggle" title="Toggle fairy lights effect">Festive ✨</button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Landing Section -->
+  <section class="hero-section">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>✨ Christmas Eve in Princes Town, Trinidad</span>
+        </div>
+        <h2 class="hero-title">
+          Feel the Heartbeat of Caribbean <span>Parang!</span>
+        </h2>
+        <p class="hero-author">Written with love by <strong>Kristee Kalisingh</strong></p>
+        <p class="hero-desc">
+          Join young Azariah as she follows the strum of the four-string cuatro and the rattle of chac-chacs through the moonlit streets of Princes Town, discovering the joyful music, delicious pastelles, and rich legacy of Queen Daisy Voisin.
+        </p>
+        <div class="hero-ctas">
+          <a href="#reader-section" class="btn-hero-primary">📖 Open Interactive Reader</a>
+          <a href="#music-section" class="btn-hero-secondary">🎶 Play Virtual Parang Band</a>
+          <a href="#activities-section" class="btn-hero-secondary">🎨 Kids' Activity Corner</a>
+        </div>
+        <div class="hero-tags">
+          <span class="tag-item">🪕 4-String Cuatro</span>
+          <span class="tag-item">🥥 Calabash Chac-Chacs</span>
+          <span class="tag-item">👑 Queen Daisy Voisin</span>
+          <span class="tag-item">🫔 Steamed Pastelles & Sorrel</span>
+        </div>
+      </div>
+
+      <div class="hero-book-showcase">
+        <div class="hero-cover-wrap">
+          <img src="images/cover.jpg" alt="Azariah's Parang Adventure Book Cover" id="hero-cover-img">
+          <div class="cover-badge">
+            <span>📖 Final Draft • 23 Illustrated Spreads</span>
+            <a href="#reader-section">Read Now ➡️</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Interactive Digital Reader & Flipbook -->
+  <section id="reader-section">
+    <div class="section-header">
+      <span class="section-eyebrow">Interactive Digital Reader</span>
+      <h3 class="section-title">Turn the Pages with Azariah</h3>
+      <p class="section-desc">Experience every vibrant spread in full high-resolution widescreen or single-page view. Click any page to zoom in!</p>
+    </div>
+
+    <div class="reader-section">
+      <!-- Toolbar -->
+      <div class="reader-toolbar">
+        <div class="reader-info">
+          <span class="reader-page-num" id="reader-page-num">Spread 1 of 23</span>
+          <span class="reader-page-title" id="reader-page-title">Cover — Azariah's Parang Adventure</span>
+        </div>
+        <div class="reader-actions">
+          <button class="reader-ctrl-btn" id="reader-mode-toggle" title="Switch between Spreads and Single Page view">🌟 Double Spread Mode</button>
+          <button class="reader-ctrl-btn" id="reader-zoom" title="Zoom in on current page">🔍 Zoom</button>
+          <button class="reader-ctrl-btn" id="reader-fullscreen" title="Read in Fullscreen">⛶ Fullscreen</button>
+        </div>
+      </div>
+
+      <!-- Musical / Activity Notice Banner -->
+      <div class="reader-audio-notice" id="reader-audio-notice" style="display:none;"></div>
+
+      <!-- Main Viewer Stage -->
+      <div class="reader-stage">
+        <button class="reader-nav-arrow reader-nav-prev" id="reader-prev" aria-label="Previous Page">&#8592;</button>
+        <div class="reader-book-wrap" id="reader-book-wrap" title="Click to open zoom lightbox">
+          <img class="reader-book-img" id="reader-img" src="images/cover.jpg" alt="Azariah's Parang Adventure Spread">
+        </div>
+        <button class="reader-nav-arrow reader-nav-next" id="reader-next" aria-label="Next Page">&#8594;</button>
+      </div>
+
+      <!-- Filmstrip Thumbnails -->
+      <div class="reader-thumbnails-wrap">
+        <div class="reader-thumb-bar" id="reader-thumb-bar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Daisy Voisin Listening Stops & Rhythm Room -->
+  <section id="music-section">
+    <div class="section-header">
+      <span class="section-eyebrow">Daisy Voisin Listening Stops</span>
+      <h3 class="section-title">Sing, Strum, and Shake to the Beat!</h3>
+      <p class="section-desc">Press play on Daisy Voisin's real parang songs recorded in Trinidad! Then tap the instruments below to play along.</p>
+    </div>
+
+    <div class="music-hub-container">
+      <!-- 3 Real MP3 Listening Stops -->
+      <div class="listening-stops-grid">
+        <div class="listening-stop-card" id="stop-alegria">
+          <div class="stop-header">
+            <span class="stop-badge">Listening Stop #1</span>
+            <span class="stop-book-ref">Page 3</span>
+          </div>
+          <h4>&#8220;Alegria, Alegria&#8221;</h4>
+          <p class="stop-lyrics">&#8220;Alegria, alegria! Alegria y placer...&#8221;</p>
+          <p class="stop-desc">The joyful morning anthem — Daisy Voisin's most beloved parang song celebrating Christmas in Princes Town.</p>
+          <audio class="parang-player" controls preload="none">
+            <source src="music/Alegria Alegria.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+          </audio>
+        </div>
+
+        <div class="listening-stop-card" id="stop-sereno">
+          <div class="stop-header">
+            <span class="stop-badge">Listening Stop #2</span>
+            <span class="stop-book-ref">Page 5</span>
+          </div>
+          <h4>&#8220;Sereno, Sereno&#8221;</h4>
+          <p class="stop-lyrics">&#8220;Sereno sereno, la luna esta clara...&#8221;</p>
+          <p class="stop-desc">The classic nocturnal serenade sung outside the front porch — open your door, the paranderos are here!</p>
+          <audio class="parang-player" controls preload="none">
+            <source src="music/Sereno Sereno.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+          </audio>
+        </div>
+
+        <div class="listening-stop-card" id="stop-hurrah">
+          <div class="stop-header">
+            <span class="stop-badge">Listening Stop #3</span>
+            <span class="stop-book-ref">Page 10</span>
+          </div>
+          <h4>&#8220;Hurrah, Hurrah&#8221;</h4>
+          <p class="stop-lyrics">&#8220;Hurrah! Hurrah! Que viva la parranda!&#8221;</p>
+          <p class="stop-desc">A triumphant, high-tempo village finale — everyone dances when this song begins!</p>
+          <audio class="parang-player" controls preload="none">
+            <source src="music/Hurrah Hurrah.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+          </audio>
+        </div>
+      </div>
+
+      <!-- Play-Along Rhythm Metronome -->
+      <div class="rhythm-sequencer-box">
+        <h4>&#127941; Play Along with the Parang Band!</h4>
+        <p>Start the beat, then tap the instruments below — just like Azariah's village band!</p>
+        <div class="beat-indicator-row">
+          <div class="beat-dot"></div>
+          <div class="beat-dot"></div>
+          <div class="beat-dot"></div>
+          <div class="beat-dot"></div>
+          <div class="beat-dot"></div>
+          <div class="beat-dot"></div>
+        </div>
+        <button class="btn-rhythm-toggle" id="toggle-rhythm-btn">&#9654;&#65039; Start the Caribbean Rhythm</button>
+      </div>
+
+      <!-- Virtual Instrument Rack -->
+      <div class="instrument-rack-grid">
+        <div class="instrument-card" id="card-cuatro">
+          <div class="instrument-icon">&#129685;</div>
+          <h5>Trinidad Cuatro</h5>
+          <span class="instrument-shortcut">Keyboard: [C]</span>
+          <div class="cuatro-chords-row">
+            <button class="cuatro-chord-btn active" data-chord="G">G</button>
+            <button class="cuatro-chord-btn" data-chord="C">C</button>
+            <button class="cuatro-chord-btn" data-chord="D7">D7</button>
+            <button class="cuatro-chord-btn" data-chord="Em">Em</button>
+            <button class="cuatro-chord-btn" data-chord="A">A</button>
+          </div>
+        </div>
+        <div class="instrument-card" id="card-chacchac">
+          <div class="instrument-icon">&#129381;</div>
+          <h5>Chac-Chacs</h5>
+          <span class="instrument-shortcut">Keyboard: [M]</span>
+          <button class="btn-play-instrument" id="play-chacchac-btn">Shake! &#127926;</button>
+        </div>
+        <div class="instrument-card" id="card-toctoc">
+          <div class="instrument-icon">&#129717;</div>
+          <h5>Toc-Toc</h5>
+          <span class="instrument-shortcut">Keyboard: [T]</span>
+          <button class="btn-play-instrument" id="play-toctoc-btn">Clack! &#127926;</button>
+        </div>
+        <div class="instrument-card" id="card-boxbass">
+          <div class="instrument-icon">&#128230;</div>
+          <h5>Box Bass</h5>
+          <span class="instrument-shortcut">Keyboard: [B]</span>
+          <button class="btn-play-instrument" id="play-boxbass-btn">Thump! &#127926;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Kids Activity Corner - TABBED CHILD-FRIENDLY LAYOUT -->
+  <section id="activities-section">
+    <div class="section-header">
+      <span class="section-eyebrow">Kids Activity Corner</span>
+      <h3 class="section-title">Pick Your Activity!</h3>
+      <p class="section-desc">Choose what you want to do — one fun thing at a time, no scrolling needed!</p>
+    </div>
+
+    <!-- Big Friendly Activity Selector Buttons -->
+    <div class="activity-picker" id="activity-picker">
+      <button class="activity-pick-btn active" data-tab="tab-cuatro">
+        <span class="pick-emoji">&#127912;</span>
+        <span class="pick-label">Design a Cuatro</span>
+      </button>
+      <button class="activity-pick-btn" data-tab="tab-matching">
+        <span class="pick-emoji">&#129504;</span>
+        <span class="pick-label">Matching Game</span>
+      </button>
+      <button class="activity-pick-btn" data-tab="tab-detective">
+        <span class="pick-emoji">&#128269;</span>
+        <span class="pick-label">Parang Detective</span>
+      </button>
+      <button class="activity-pick-btn" data-tab="tab-explorer">
+        <span class="pick-emoji">&#129517;</span>
+        <span class="pick-label">Explorer Checklist</span>
+      </button>
+    </div>
+
+    <!-- Activity Tab Panels -->
+    <div class="activity-panels">
+
+      <!-- Panel 1: Cuatro Studio -->
+      <div class="activity-panel active" id="tab-cuatro">
+        <div class="panel-header">
+          <span class="panel-eyebrow">Activity 1 &#8212; Book Page 17</span>
+          <h3>&#127912; Design Your Own Cuatro!</h3>
+          <p>Color your cuatro, add Caribbean stamps, then press Strum to hear it play!</p>
+        </div>
+        <div class="studio-layout">
+          <div class="canvas-wrapper">
+            <canvas id="cuatro-canvas"></canvas>
+          </div>
+          <div class="studio-controls">
+            <div class="control-group">
+              <label>Pick a Color</label>
+              <div class="color-palette-row">
+                <div class="color-swatch active" style="background:#e11d48;" data-color="#e11d48" title="Hibiscus Red"></div>
+                <div class="color-swatch" style="background:#fbbf24;" data-color="#fbbf24" title="Sunshine Gold"></div>
+                <div class="color-swatch" style="background:#f97316;" data-color="#f97316" title="Mango Orange"></div>
+                <div class="color-swatch" style="background:#10b981;" data-color="#10b981" title="Palm Green"></div>
+                <div class="color-swatch" style="background:#06b6d4;" data-color="#06b6d4" title="Island Teal"></div>
+                <div class="color-swatch" style="background:#7c3aed;" data-color="#7c3aed" title="Orchid Purple"></div>
+                <div class="color-swatch" style="background:#78350f;" data-color="#78350f" title="Cocoa Wood"></div>
+                <div class="color-swatch" style="background:#ffffff;" data-color="#ffffff" title="White"></div>
+                <div class="color-swatch" style="background:#0f172a;" data-color="#0f172a" title="Black"></div>
+              </div>
+            </div>
+            <div class="control-group">
+              <label>Tool</label>
+              <div class="tools-row">
+                <button class="tool-btn active" id="tool-brush">&#128396;&#65039; Paint</button>
+                <button class="tool-btn" id="tool-eraser">&#129529; Erase</button>
+              </div>
+            </div>
+            <div class="control-group">
+              <label>Brush Size</label>
+              <div class="brush-slider-wrap">
+                <input type="range" id="brush-size" min="3" max="30" value="8">
+              </div>
+            </div>
+            <div class="control-group">
+              <label>Fun Stamps</label>
+              <div class="stamps-row">
+                <button class="stamp-btn" data-stamp="&#127802;">&#127802;</button>
+                <button class="stamp-btn" data-stamp="&#11088;">&#11088;</button>
+                <button class="stamp-btn" data-stamp="&#127925;">&#127925;</button>
+                <button class="stamp-btn" data-stamp="&#10024;">&#10024;</button>
+                <button class="stamp-btn" data-stamp="&#128155;">&#128155;</button>
+              </div>
+            </div>
+            <div class="studio-actions-row">
+              <button class="btn-strum-cuatro" id="tool-strum">&#127926; Strum My Cuatro!</button>
+              <button class="btn-download-cuatro" id="tool-download">&#128190; Save My Artwork</button>
+              <div class="sub-actions-row">
+                <button class="btn-sub-action" id="tool-undo">&#8617;&#65039; Undo</button>
+                <button class="btn-sub-action" id="tool-clear">&#128465;&#65039; Clear</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Matching Game -->
+      <div class="activity-panel" id="tab-matching">
+        <div class="panel-header">
+          <span class="panel-eyebrow">Activity 2 &#8212; Book Page 19</span>
+          <h3>&#129504; Parang Matching Game</h3>
+          <p>Flip the cards to find matching pairs and hear each instrument!</p>
+        </div>
+        <div class="game-stats-bar">
+          <div class="stat-item">Moves: <strong id="match-moves">0</strong></div>
+          <div class="stat-item">Time: <strong id="match-timer">00:00</strong></div>
+          <button class="btn-game-restart" id="restart-matching">&#128260; Reset</button>
+        </div>
+        <div id="matching-game-board"></div>
+      </div>
+
+      <!-- Panel 3: Detective Quiz -->
+      <div class="activity-panel" id="tab-detective">
+        <div class="panel-header">
+          <span class="panel-eyebrow">Activity 3 &#8212; Book Page 11</span>
+          <h3>&#128269; Parang Detective</h3>
+          <p>Solve 5 fun riddles from Azariah's adventure and earn your Official Parang Detective Badge!</p>
+        </div>
+        <div id="detective-game-board"></div>
+      </div>
+
+      <!-- Panel 4: Explorer Checklist -->
+      <div class="activity-panel" id="tab-explorer">
+        <div class="panel-header">
+          <span class="panel-eyebrow">Activity 4 &#8212; Book Page 18</span>
+          <h3>&#129517; I Am a Parang Explorer!</h3>
+          <p>Tick off everything you discovered in the story, then print your very own certificate!</p>
+        </div>
+        <div id="explorer-game-board"></div>
+      </div>
+
+    </div><!-- end activity-panels -->
+  </section>
+
+  <!-- Section 4: Cultural Hub ("Let's Keep Parang Alive!") -->
+  <section id="cultural-hub-section">
+    <div class="section-header">
+      <span class="section-eyebrow">Let's Keep Parang Alive!</span>
+      <h3 class="section-title">History, Heritage, and Traditions</h3>
+      <p class="section-desc">Adapted from the Parent & Teacher Guide (Spread 22) to help families, schools, and cultural lovers preserve the beautiful parang heritage of Trinidad & Tobago.</p>
+    </div>
+
+    <div class="cultural-grid">
+      <!-- Card 1: Daisy Voisin -->
+      <div class="cultural-card">
+        <div class="card-top-icon">👑</div>
+        <h3>The Queen of Parang: Daisy Voisin</h3>
+        <p>Born in 1924, Daisy Voisin was the beloved matriarch of Trinidad parang. Based in Princes Town, she founded <em>La Divina Pastora</em> in 1971 and carried parang into the hearts of the nation and the world.</p>
+        <ul class="cultural-facts-list">
+          <li>💐 Always sang holding a fresh bouquet of yellow flowers</li>
+          <li>🤍 Wore elegant white Caribbean dresses</li>
+          <li>🎶 Composed "Alegria, Alegria", "Hurrah Hurrah", and "Sereno"</li>
+          <li>🏅 Awarded the Hummingbird Medal (Gold) for Culture</li>
+        </ul>
+      </div>
+
+      <!-- Card 2: The Story of Parang -->
+      <div class="cultural-card">
+        <div class="card-top-icon">🌴</div>
+        <h3>The Roots of Parranda</h3>
+        <p>Parang originated from the Spanish word <em>parranda</em>, meaning a spree or merrymaking. It was brought to Trinidad centuries ago by Spanish settlers, Venezuelan cocoa panyol workers, and indigenous Amerindian peoples.</p>
+        <ul class="cultural-facts-list">
+          <li>🚪 Paranderos visit neighborhood houses late at night</li>
+          <li>🗣️ Traditional lyrics are sung in sweet Spanish patois</li>
+          <li>⛪ Songs tell the sacred nativity story & festive cheer</li>
+          <li>🤝 Promotes unity, community sharing, and hospitality</li>
+        </ul>
+      </div>
+
+      <!-- Card 3: The Parang Orchestra -->
+      <div class="cultural-card">
+        <div class="card-top-icon">🪕</div>
+        <h3>The Parang Instruments</h3>
+        <p>A true parang band relies on acoustic percussion and stringed instruments working in tight polyrhythmic harmony:</p>
+        <ul class="cultural-facts-list">
+          <li>🪕 <strong>Cuatro:</strong> 4 nylon strings delivering the fast strum</li>
+          <li>🥥 <strong>Chac-Chacs:</strong> Calabash maracas giving the crisp drive</li>
+          <li>📦 <strong>Box Bass:</strong> Wooden box bass with resonant acoustic punch</li>
+          <li>🪵 <strong>Toc-Toc:</strong> Resonant wooden clack block</li>
+          <li>🎸 <strong>Guitar & Mandolin:</strong> Melodic counterpoint & sweetness</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Trinidad Christmas Food Spotlight -->
+    <h3 class="food-spotlight-title">🍴 Parang Makes You Hungry! (Traditional Christmas Food)</h3>
+    <div class="food-grid">
+      <div class="food-card">
+        <span class="food-emoji">🫔</span>
+        <h4>Steamed Pastelles</h4>
+        <p>Cornmeal dough filled with seasoned beef, chicken, or lentils, flavored with raisins, olives, and capers, wrapped in banana leaves and steamed to fragrant perfection.</p>
+      </div>
+
+      <div class="food-card">
+        <span class="food-emoji">🍷</span>
+        <h4>Ruby-Red Sorrel</h4>
+        <p>A festive, deep crimson beverage brewed from steeped sepals of the sorrel plant, spiced with cinnamon sticks, whole cloves, and dried orange peel.</p>
+      </div>
+
+      <div class="food-card">
+        <span class="food-emoji">🥮</span>
+        <h4>Traditional Black Cake</h4>
+        <p>The crown jewel of Caribbean Christmas: rich fruit cake made with dried fruits macerated for months in dark rum and cherry brandy, with aromatic warm spices.</p>
+      </div>
+
+      <div class="food-card">
+        <span class="food-emoji">🥛</span>
+        <h4>Ponche de Crème</h4>
+        <p>Trinidad's creamy, velvety homemade eggnog, infused with sweetened condensed milk, fresh lime zest, aromatic Angostura bitters, and grated nutmeg.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Meet the Author & Portfolio Hub -->
+  <section id="author-section">
+    <div class="section-header">
+      <span class="section-eyebrow">Meet the Storyteller</span>
+      <h3 class="section-title">Kristee Kalisingh</h3>
+      <p class="section-desc">Author, voiceover artist, and cultural enthusiast dedicated to bringing authentic Caribbean stories to life for children across the globe.</p>
+    </div>
+
+    <div class="author-card-wrap">
+      <div class="author-grid">
+        <div class="author-photo-box">
+          <div class="author-avatar">
+            <div class="author-avatar-inner">
+              <span>🌺</span>
+            </div>
+          </div>
+          <span class="author-role-tag">Author & Voice Artist</span>
+        </div>
+
+        <div class="author-bio">
+          <h3>Kristee Kalisingh</h3>
+          <p class="author-tagline">"Parang is not just music; it is the feeling of community, family, and warmth."</p>
+          <p class="author-text">
+            Growing up in Trinidad & Tobago, Kristee experienced the magic of paranderos arriving on Christmas Eve—the gentle strumming of the cuatro, the sweet scent of steaming pastelles, and the unforgettable joy in every home. She created <em>Azariah's Parang Adventure</em> to honor Princes Town, pay homage to the legendary Queen Daisy Voisin, and ensure that younger generations everywhere hold on to this treasured Caribbean art form.
+          </p>
+
+          <!-- Hub & Spoke Cross-Portfolio Links -->
+          <h4 style="color:#fff; font-size:1.05rem; margin-bottom:12px;">Kristee's Professional Services & Bookings:</h4>
+          <div class="portfolio-services-grid">
+            <a href="mailto:contact@kristeekalisingh.com?subject=School%20Author%20Visit%20Inquiry" class="service-card">
+              <div class="service-icon">📚</div>
+              <div class="service-title">Author Visits & Readings</div>
+              <div class="service-desc">Book interactive storytelling & music workshops for schools and libraries.</div>
+            </a>
+
+            <a href="mailto:contact@kristeekalisingh.com?subject=Voiceover%20Inquiry" class="service-card">
+              <div class="service-icon">🎙️</div>
+              <div class="service-title">Voiceover Artistry</div>
+              <div class="service-desc">Commercial narration, children's audiobooks, and animation voice acting.</div>
+            </a>
+
+            <a href="mailto:contact@kristeekalisingh.com?subject=Event%20Hosting%20Inquiry" class="service-card">
+              <div class="service-icon">🎤</div>
+              <div class="service-title">Event Hosting / MC</div>
+              <div class="service-desc">Engaging, professional hosting for cultural galas and corporate gatherings.</div>
+            </a>
+
+            <a href="mailto:contact@kristeekalisingh.com?subject=Real%20Estate%20Consultation" class="service-card">
+              <div class="service-icon">🏡</div>
+              <div class="service-title">Real Estate Services</div>
+              <div class="service-desc">Property consulting, residential listings, and commercial real estate guidance.</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Printables & Screen-Free Activity Corner -->
+  <section id="downloads-section">
+    <div class="section-header">
+      <span class="section-eyebrow">Screen-Free Family & Classroom Corner</span>
+      <h3 class="section-title">Printables & Official PDFs</h3>
+      <p class="section-desc">Download complete high-resolution editions for offline reading, tablet viewing, or classroom printing.</p>
+    </div>
+
+    <div class="downloads-grid">
+      <!-- Download 1: Spreads PDF -->
+      <div class="download-card">
+        <div>
+          <div class="download-icon">📖</div>
+          <h4>Final Draft Spreads PDF</h4>
+          <p>Full 23-spread cinematic edition matching the book's dual-page print layout. Perfect for widescreen monitors, projectors, and interactive smartboards.</p>
+        </div>
+        <div>
+          <div class="download-meta">
+            <span>Format: PDF</span>
+            <span>Size: 11.8 MB</span>
+          </div>
+          <a href="Azariah_Parang_Adventure_Final_Draft_Spreads.pdf" download class="btn-download">⬇️ Download Spreads PDF</a>
+        </div>
+      </div>
+
+      <!-- Download 2: Single-Pages PDF -->
+      <div class="download-card">
+        <div>
+          <div class="download-icon">📱</div>
+          <h4>Single-Pages Print & Mobile PDF</h4>
+          <p>Individual 1:1 square single pages formatted for mobile reading, iPad/tablets, and standard single-sheet home printers.</p>
+        </div>
+        <div>
+          <div class="download-meta">
+            <span>Format: PDF</span>
+            <span>Size: 14.0 MB</span>
+          </div>
+          <a href="Azariah_Parang_Adventure_Final_Draft_SinglePages.pdf" download class="btn-download">⬇️ Download Single Pages</a>
+        </div>
+      </div>
+
+      <!-- Download 3: Full Project Zip Bundle -->
+      <div class="download-card">
+        <div>
+          <div class="download-icon">📦</div>
+          <h4>Complete Offline Archive (.zip)</h4>
+          <p>Contains both PDF editions, all 23 high-resolution illustrations, and the standalone offline digital reader.</p>
+        </div>
+        <div>
+          <div class="download-meta">
+            <span>Format: ZIP</span>
+            <span>Size: 27.6 MB</span>
+          </div>
+          <a href="Azariah_Parang_Adventure_Final_Draft.zip" download class="btn-download">⬇️ Download Complete ZIP</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Order & Support the Book (Configurable Gateway) -->
+  <section id="order-section">
+    <div class="order-box">
+      <h3>Bring Azariah's Parang Adventure Home!</h3>
+      <p>Support Caribbean children's literature and share the spirit of Princes Town parang with your family, school, or community organization.</p>
+      
+      <div class="hero-ctas" style="justify-content: center; margin-bottom: 20px;">
+        <a href="mailto:contact@kristeekalisingh.com?subject=Order%20Azariah%27s%20Parang%20Adventure" class="btn-hero-primary">🛍️ Order Print Copy ($15 USD / $100 TTD)</a>
+        <a href="#downloads-section" class="btn-hero-secondary">📥 Digital Edition Available Above</a>
+      </div>
+
+      <p style="font-size: 0.84rem; color: #94a3b8; margin-bottom: 14px;">Supported Local & International Payment Options:</p>
+      <div class="payment-options-row">
+        <span class="pay-badge">💳 WiPay (Trinidad & Caribbean Debit/Credit)</span>
+        <span class="pay-badge">🎟️ NLCB Cash Voucher (Trinidad)</span>
+        <span class="pay-badge">🌎 PayPal (USA, UK, Canada, Worldwide)</span>
+        <span class="pay-badge">🛍️ Shopify / Direct Bank Transfer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4>🌺 Azariah's Parang Adventure</h4>
+        <p>A companion website celebrating the children's storybook by Kristee Kalisingh. Dedicated to preserving the parang traditions of Princes Town and honoring Queen Daisy Voisin.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Exploration</h5>
+        <ul>
+          <li><a href="#reader-section">Digital Reader</a></li>
+          <li><a href="#music-section">Rhythm Room & Daisy Voisin</a></li>
+          <li><a href="#cuatro-studio-section">Design Your Own Cuatro</a></li>
+          <li><a href="#matching-game-section">Parang Matching Game</a></li>
+          <li><a href="#parang-detective-section">Parang Detective Quiz</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Heritage & Author</h5>
+        <ul>
+          <li><a href="#cultural-hub-section">The Queen of Parang (Daisy Voisin)</a></li>
+          <li><a href="#cultural-hub-section">Traditional Christmas Foods</a></li>
+          <li><a href="#author-section">Meet Kristee Kalisingh</a></li>
+          <li><a href="#downloads-section">Download Free PDFs</a></li>
+          <li><a href="#order-section">Order Physical Copies</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kristee Kalisingh. All Rights Reserved. Made with Caribbean pride.</p>
+      <p>Princes Town, Trinidad & Tobago 🇹🇹</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Zoom Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Page Zoom View">
+    <div class="lightbox-content">
+      <button class="close-lightbox" id="close-lightbox" aria-label="Close Zoom">&times;</button>
+      <img id="lightbox-img" src="images/page_000.jpg" alt="Zoomed Page">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Matching Game Victory Modal -->
+  <div class="game-modal" id="match-victory-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-trophy">🏆</div>
+      <h3>Parang Champion!</h3>
+      <p>You matched all the Caribbean parang cards in <strong id="final-match-moves">0</strong> moves!</p>
+      <button class="btn-modal-primary" id="play-again-match-btn">Play Again 🔄</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/audio-synth.js"></script>
+  <script src="js/cuatro-designer.js"></script>
+  <script src="js/matching-game.js"></script>
+  <script src="js/parang-detective.js"></script>
+  <script src="js/parang-explorer.js"></script>
+  <script src="js/reader.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
